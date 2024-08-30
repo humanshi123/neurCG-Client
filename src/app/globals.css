@@ -20,33 +20,38 @@ input:focus-visible {
 }
 .blurr-bg {
   border-radius: 20px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), rgba(232, 114, 35, 0.60);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    rgba(232, 114, 35, 0.6);
   backdrop-filter: blur(11px);
   padding: 27px 87px 0;
   max-width: 542px;
   margin: 0 auto;
 }
 .main-title {
-  color: #3A2C23;
+  color: #3a2c23;
   font-size: 40px;
   font-weight: 600;
   line-height: normal;
 }
 .login-desc {
-color: #686C78;
-font-size: 16px;
-font-weight: 400;
-line-height: normal;
+  color: #686c78;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
 }
 input {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #FFE2CE;
-  background: #FFF;
+  border: 1px solid #ffe2ce;
+  background: #fff;
   padding: 14px 28px;
   font-size: 16px;
   line-height: 28px;
-  color: #686C78;
+  color: #686c78;
 }
 .otp-inputs input {
   width: 58px;
@@ -67,24 +72,24 @@ ul.navList li a:before {
   height: 100%;
   width: 6px;
   border-radius: 12px 0px 0px 12px;
-  background: #E87223;
+  background: #e87223;
 }
 ul.navList li.active a {
-  background: #FFF1E8;
+  background: #fff1e8;
   border-radius: 8px;
 }
 ul.navList li.active a svg path {
-  fill: #ED955A;
+  fill: #ed955a;
 }
 ul.navList li.active a span {
-  color: #E87223;
+  color: #e87223;
 }
 ul.navList li a span {
-  color: #6B6B6B; 
-font-size: 14px; 
-font-family: var(--font-inter);
-font-weight: 400;
-line-height: normal;
+  color: #6b6b6b;
+  font-size: 14px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  line-height: normal;
 }
 .overflo-custom::-webkit-scrollbar-track {
   background-color: #ffffff;
@@ -101,4 +106,23 @@ line-height: normal;
   border-radius: 10px;
   background-color: #283c6355;
   height: 6px;
+}
+.section-title {
+  color: #3a2c23;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+.custom-tabs li.active p svg circle {
+  stroke: #E87223;
+}
+.button {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 13px 27px;
+  height: 43px;
+  border-radius: 5px;
+background: #E87223;
 }

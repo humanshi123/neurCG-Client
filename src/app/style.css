@@ -9,7 +9,9 @@ body,
 p, li {
   font-family: var(--font-nunito);
 }
-
+button {
+  font-family: var(--font-inter) !important;
+}
 h1,
 h2,
 h3,

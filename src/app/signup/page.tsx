@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
         <div className="waves">
-          <div className="py-[125px] ">
+          <div className="py-[125px] px-10 ">
             <LoginCard imgSrc={loginImg} />
           </div>
         </div>

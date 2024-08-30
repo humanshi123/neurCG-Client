@@ -4,6 +4,8 @@ import "./globals.css";
 import { usePathname } from 'next/navigation';
 import SideBar from "@/components/SideBar";
 import Header from "@/components/Header";
+import dp from "@/assets/images/profilepic.png"
+
 //import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -22,14 +24,20 @@ export default function RootLayout({
     <html lang="en">
       <body className="{inter.className}">
         <div>
-          {!hideHeader.includes(pathname) && <Header />}
+          {!hideHeader.includes(pathname) && 
+          <Header 
+          creditsLeft={148} 
+          notificationsCount={3} 
+          userImage= {dp}
+        />
+          }
         </div>
         <div className="flex h-screen flex-col lg:flex-row lg:overflow-hidden">
           <div className="flex-none h-[100vh] ">
             {/* <SideNav /> */}
             {!hideSideBar.includes(pathname) && <SideBar /> }
           </div>
-          <main className="flex-grow md:overflow-y-auto">
+          <main className="flex-grow md:overflow-y-auto bg-[#F5F7FA] px-[35px] py-[40px] ">
             {children}
           </main>
         </div>

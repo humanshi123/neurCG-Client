@@ -10,7 +10,7 @@ export default function Home() {
       <div className="grid grid-cols-2 items-center">
         {/* min-h-[100vh]  max-w-[418px] pl-[113px] pr-4 */}
         <div className=" bg-[#F5F7FA] flex flex-col justify-center pl-[113px] pr-4 h-full">
-          <div className="max-w-[418px] ">
+          <div className="max-w-[418px] 2xl:mx-auto">
             <Image src={logo} height={100} width={200} alt="" />
             <h1 className="main-title mt-[94px] mb-3 ">Login</h1>
             <p className="login-desc mb-10">Login to your account and see the magic of AI.</p>
@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
         <div className="waves">
-          <div className="py-[125px] ">
+          <div className="py-[125px] px-10 ">
             <LoginCard imgSrc={loginImg} />
           </div>
         </div>
