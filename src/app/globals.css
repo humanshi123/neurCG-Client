@@ -10,7 +10,7 @@
 img {
   max-width: 100%;
 }
-input:focus-visible {
+input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: none;
 }
 .waves {
@@ -125,4 +125,31 @@ ul.navList li a span {
   height: 43px;
   border-radius: 5px;
 background: #E87223;
+}
+.image-section .thumbnail.active img {
+border: 2px solid #E87223;
+}
+.text-selecion label {
+  color: #6B6B6B;
+  font-family: var(--font-inter);
+font-size: 14px;
+font-weight: 400;
+line-height: normal;
+}
+.text-selecion select {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ffe2ce;
+  background: #fff;
+  padding: 13.5px 18px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #828282;
+}
+.text-area {
+  border-radius: 5px;
+border: 1px solid #FFE2CE;
+background: #FFF;
+padding: 10px;
+width: 100%;
 }

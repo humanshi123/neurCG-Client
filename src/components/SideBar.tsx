@@ -29,8 +29,8 @@ const SideBar = () => {
             </Link>
           </li>
           <p className="text-[#818999] text-[10px] font-medium mt-5 mb-[2px] pl-5">SERVICES</p>
-          <li className={isActive('/payment-request')}>
-            <Link href="/payment-request">
+          <li className={isActive('/text-photo')}>
+            <Link href="/text-photo">
               <TextIcon />
           <span>Text & Photo</span>
             </Link>
@@ -63,7 +63,8 @@ const SideBar = () => {
         </ul>
       </div>
       <div className="my-[50px] mx-[30px]">
-       <button className="w-full px-5 h-[50px] py-[10px] text-[#e87223] text-base font-medium bg-white rounded-lg border border-[#e87223]">UPGRADE</button>
+       <button className="w-full px-5 h-[50px] py-[10px] text-[#e87223] text-base font-medium bg-white rounded-lg border border-[#e87223]">
+       UPGRADE PLAN</button>
       </div>
     </div>
   );

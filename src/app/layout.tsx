@@ -37,7 +37,7 @@ export default function RootLayout({
             {/* <SideNav /> */}
             {!hideSideBar.includes(pathname) && <SideBar /> }
           </div>
-          <main className="flex-grow md:overflow-y-auto bg-[#F5F7FA] px-[35px] py-[40px] ">
+          <main className="flex-grow md:overflow-y-auto overflo-custom bg-[#F5F7FA] px-[35px] py-[40px] ">
             {children}
           </main>
         </div>

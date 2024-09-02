@@ -6,7 +6,7 @@
 }
 
 body,
-p, li {
+p, li, option, select {
   font-family: var(--font-nunito);
 }
 button {
@@ -17,9 +17,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-button {
+h6 {
   font-family: var(--font-inter);
+  font-weight: 500;
 }
 
 
