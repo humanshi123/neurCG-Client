@@ -35,27 +35,27 @@ const SideBar = () => {
           <span>Text & Photo</span>
             </Link>
           </li>
-          <li className={isActive('/payment-history')}>
-            <Link href="/payment-history">
+          <li className={isActive('/audio-photo')}>
+            <Link href="/audio-photo">
           <AudioIcon />
               <span>Audio & Photo</span>
             </Link>
           </li>
-          <li className={isActive('/profile')}>
-            <Link href="/profile">
+          <li className={isActive('/video-translation')}>
+            <Link href="/video-translation">
             <VideoIcon />
               <span>Video Translation</span>
             </Link>
           </li>
           <p className="text-[#818999] text-[10px] font-medium mt-5 mb-[2px] pl-5">Other</p>
-          <li className={isActive('/view-task')}>
-            <Link href="/view-task">
+          <li className={isActive('/refer')}>
+            <Link href="/refer">
             <ReferIcon />
              <span>Refer</span>
             </Link>
           </li>
-          <li className={isActive('/view-task')}>
-            <Link href="/view-task">
+          <li className={isActive('/my-profile')}>
+            <Link href="/my-profile">
             <ProfileIcon />
              <span>My Profile</span>
             </Link>

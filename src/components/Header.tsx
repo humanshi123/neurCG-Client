@@ -24,7 +24,11 @@ const Header: React.FC<HeaderProps> = ({
   const pageNames: { [key: string]: string } = {
     "/home-page": "Home",
     "/my-projects": "My Projects",
-    "/profile": "Text & Photo",
+    "/text-photo": "Text & Photo To Video",
+    "/audio-photo": "Audio & Photo To Video",
+    "/video-translation": "Video Generation And Translation",
+    "/refer": "Refer",
+    "/my-profile": "My Profile",
     // Add more paths as needed
   };
 
@@ -32,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="flex justify-between items-center py-[23px] px-[30px] bg-white ">
-      <div className="min-w-[232px] ">
+      <div className="min-w-[267px] ">
         <Link href="/">
           <Image
             src={Logo}
