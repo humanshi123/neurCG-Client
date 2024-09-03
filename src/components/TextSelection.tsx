@@ -17,13 +17,13 @@ const voiceOptions: VoiceOption[] = [
     value: "david_gotham",
     label: "David Gotham",
     gender: "male",
-    audioSrc: "/audios/david_gotham.mp3",
+    audioSrc: "/public/assets/audio/audio1.mp3",
   },
   {
     value: "sanya_jean",
     label: "Sanya Jean",
     gender: "female",
-    audioSrc: "/audios/sanya_jean.mp3",
+    audioSrc: "/public/assets/audio/audio2.mp3",
   },
   // Add more voices as needed
 ];
