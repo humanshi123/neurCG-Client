@@ -19,6 +19,7 @@ const Header: React.FC<HeaderProps> = ({
   userImage,
 }) => {
   const [showNotifications, setShowNotifications] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
 
   const pageNames: { [key: string]: string } = {
@@ -35,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
   const currentPageName = pageNames[pathname] || "Home";
 
   return (
-    <header className="flex justify-between items-center py-[23px] px-[30px] bg-white ">
+    <header className="hidden md:flex justify-between items-center py-[23px] px-[30px] bg-white ">
       <div className="min-w-[267px] ">
         <Link href="/">
           <Image

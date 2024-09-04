@@ -41,9 +41,9 @@ const Tabs: React.FC = () => {
   return (
     <>
       {isVisible && (
-        <div className="flex items-center rounded-lg p-[7px] bg-white relative ">
+        <div className="flex gap-y-5 flex-col md:flex-row items-center rounded-lg p-[15px] md:p-[7px] bg-white relative ">
           {/* Sidebar */}
-          <div className="w-1/3 py-[5px] px-[10px] bg-[#F5F7FA] rounded-[4px]  ">
+          <div className="w-full md:w-1/3 py-[5px] px-[10px] bg-[#F5F7FA] rounded-[4px]  ">
             <ul className="space-y-2 custom-tabs">
               {tabsData.map((tab, index) => (
                 <li
@@ -61,7 +61,7 @@ const Tabs: React.FC = () => {
           </div>
 
           {/* Main Content */}
-          <div className="w-2/3 pl-[50px] flex justify-between items-center">
+          <div className="w-full md:w-2/3  md:pl-[50px] flex flex-col md:flex-row justify-between md:items-center">
             <div className="max-w-[546px] w-full">
             <h2 className="section-title !text-[28px]">{tabsData[currentTab].title}</h2>
             <p className="mb-5 mt-[10px] text-[#828282] text-sm leading-6 ">{tabsData[currentTab].content}</p>
@@ -72,7 +72,7 @@ const Tabs: React.FC = () => {
               {currentTab < tabsData.length - 1 ? "Next Step" : "Finish"}
             </button>
             </div>
-            <div className="text-[80px] text-center min-w-[168px] ">
+            <div className="text-[80px] text-right md:text-center md:min-w-[168px] ">
             👋
             </div>
           </div>

@@ -68,7 +68,7 @@ const Page = () => {
     <div>
       <section className="my-projects-recent">
         <h2 className="section-title mb-5">Recent</h2>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {ClientVideos.map((data) => (
             <VideoCards
               key={data.id}
@@ -81,7 +81,7 @@ const Page = () => {
       </section>
       <section className="last-months mt-[40px]">
         <h2 className="section-title mb-5">Last Month</h2>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {LastMonthData.map((data) => (
             <VideoCards
               key={data.id}

@@ -248,3 +248,14 @@ select, .custom-select .css-13cymwt-control {
   background-repeat: no-repeat;
   background-position: 96%;
 }
+.profile-form input {
+  padding: 10px 28px;
+  font-size: 14px;
+  color: #828282;
+}
+@media screen and (max-width: 767px)  {
+  .side-bar {
+    align-items: center;
+    padding: 10px 20px;
+  }
+}

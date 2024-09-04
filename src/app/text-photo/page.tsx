@@ -3,7 +3,7 @@ import AvatarSelection from '@/components/AvatarSelection';
 import Subtitles from '@/components/Subtitles';
 import TextSelection from '@/components/TextSelection';
 import React from 'react';
-
+ 
 const Page = () => {
     return (
         <div>

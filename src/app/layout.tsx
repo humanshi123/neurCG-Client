@@ -33,7 +33,7 @@ export default function RootLayout({
           }
         </div>
         <div className="flex h-screen flex-col lg:flex-row lg:overflow-hidden">
-          <div className="flex-none h-[100vh] ">
+          <div className="flex-none md:h-[100vh] ">
             {/* <SideNav /> */}
             {!hideSideBar.includes(pathname) && <SideBar /> }
           </div>

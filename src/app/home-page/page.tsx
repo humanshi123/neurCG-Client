@@ -62,7 +62,7 @@ const Page = () => {
         <Tabs />
          <section className='mt-[50px]'>
         <h2 className='section-title mb-5'>How to use NeurCG</h2>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {VideoData.map((data) =>(
             <NeurcgCard
             key= {data.id}
@@ -75,7 +75,7 @@ const Page = () => {
          </section>
         <section className='mt-[50px]'>
          <h2 className="section-title mb-5">Recent</h2>
-         <div className="grid grid-cols-4 gap-5">
+         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
          {ClientVideos.map((data) =>(
             <VideoCards
             key= {data.id}
