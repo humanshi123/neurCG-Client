@@ -16,13 +16,13 @@ const voiceOptions: VoiceOption[] = [
     value: "david_gotham",
     label: "David Gotham",
     gender: "male",
-    audioSrc: "/assets/audio/audio1.mp3", 
+    audioSrc: "/assets/audio/audio1.mp3",
   },
   {
     value: "sanya_jean",
     label: "Sanya Jean",
     gender: "female",
-    audioSrc: "/assets/audio/audio2.mp3", 
+    audioSrc: "/assets/audio/audio2.mp3",
   },
   // Add more voices as needed
 ];
@@ -31,6 +31,7 @@ const AddVoice = () => {
   const [selectedVoice, setSelectedVoice] = useState<VoiceOption | null>(null);
   const [isOpen, setIsOpen] = useState(true);
   const contentRef = useRef<HTMLDivElement>(null);
+  const [menuPortalTarget, setMenuPortalTarget] = useState<HTMLElement | null>(null);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -48,6 +49,12 @@ const AddVoice = () => {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      setMenuPortalTarget(document.body);
+    }
+  }, []);
+
   const handleVoiceSelect = (option: VoiceOption | null) => {
     setSelectedVoice(option);
   };
@@ -61,7 +68,7 @@ const AddVoice = () => {
     audioSrc: string,
     e: React.MouseEvent
   ) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     playAudio(audioSrc);
   };
 
@@ -110,12 +117,12 @@ const AddVoice = () => {
               formatOptionLabel={formatOptionLabel}
               isSearchable
               className="custom-select outline-none text-[#828282]"
-              classNamePrefix="react-select" // Add a class prefix to avoid conflicts
+              classNamePrefix="react-select"
               placeholder="Select Voice"
               onChange={handleVoiceSelect}
-              menuPortalTarget={document.body} // Render dropdown in the body to avoid overflow issues
+              menuPortalTarget={menuPortalTarget} // Now set dynamically
               styles={{
-                menuPortal: (base) => ({ ...base, zIndex: 9999 }), // Ensure dropdown is above everything else
+                menuPortal: (base) => ({ ...base, zIndex: 9999 }),
               }}
             />
           </label>

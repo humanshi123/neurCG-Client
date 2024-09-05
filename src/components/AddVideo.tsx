@@ -1,13 +1,14 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { VideoCameraIcon } from "@heroicons/react/24/solid"; // Assuming you have this icon or any other
+import { CrossIcon, UploadIcon } from "@/utils/svgIcons";
 
 const AddVideo = () => {
   const [isOpen, setIsOpen] = useState(true);
   const contentRef = useRef<HTMLDivElement>(null);
   const [previewVideo, setPreviewVideo] = useState<string | null>(null);
 
-  const toggleOpen = () => {
+  const toggleOpen = () => { 
     setIsOpen(!isOpen);
   };
 
@@ -47,12 +48,12 @@ const AddVideo = () => {
           maxHeight: isOpen ? contentRef.current?.scrollHeight : 0,
           opacity: isOpen ? 1 : 0,
         }}>
-        <div className="mt-5 grid grid-cols-[minmax(0,_7fr)_minmax(0,_5fr)] gap-5">
+        <div className="text-selecion mt-5 grid grid-cols-[minmax(0,_7fr)_minmax(0,_5fr)] gap-5">
           <div>
-            <label htmlFor="" className="grid gap-2">
+            <label htmlFor="" className="grid mb-2">
               Upload Video
             </label>
-            <div className="custom relative bg-[#CCE9FA] w-[236px] h-[236px] rounded-[20px] mb-[50px]">
+            <div className="custom border-dashed border-[#E87223] border relative h-[146px] rounded-[5px]">
               <input
                 className="absolute top-0 left-0 h-full w-full opacity-0 cursor-pointer"
                 type="file"   
@@ -63,27 +64,27 @@ const AddVideo = () => {
                 <div className="relative h-full">
                   <video
                     src={previewVideo}
-                    className="rounded-[20px] object-cover h-full w-full"
+                    className="rounded-[5px] object-cover h-full w-full"
                     controls
                   />
                   <button
                     type="button"
-                    className="absolute top-0 right-0 bg-[#283C63] text-white px-[6px] rounded-full"
+                    className="absolute top-0 right-0 "
                     onClick={handleRemoveVideo}
-                  >
-                    X
+                  ><CrossIcon />
                   </button>
                 </div>
               ) : (
                 <div className="grid place-items-center h-full w-full">
-                  <div className="text-center">
-                    <VideoCameraIcon className="h-10 w-10 text-[#283c63]" />
-                    <p className="text-[#283c63] text-sm mt-[20px]">
+                  <div className="text-center grid justify-items-center ">
+                    <UploadIcon />
+                    {/* <VideoCameraIcon className="h-10 w-10 text-[#283c63]" /> */}
+                    <h3 className="text-[#6B6B6B] text-sm font-[500] mt-[18px]">
                       Drag & drop the video of your choice
-                    </p>
-                    <p className="text-[#283c63] text-sm mt-[10px]">
+                    </h3>
+                    <h3 className="text-[#6B6B6B] text-sm">
                       or <span className="text-[#E87223] cursor-pointer">browse file</span> from device
-                    </p>
+                    </h3>
                   </div>
                 </div>
               )}
@@ -91,7 +92,7 @@ const AddVideo = () => {
           </div>
           <div>
             <label htmlFor="" className="grid gap-2 mb-5">
-              Text Language
+            Original Language
               <select name="textLanguage" id="textLanguage">
                 <option value="">Language Select</option>
                 <option value="lang1">Language 1</option>
@@ -99,9 +100,9 @@ const AddVideo = () => {
               </select>
             </label>
             <label htmlFor="" className="grid gap-2">
-              Subtitle Language
+            Translational Language
               <select name="subtitleLanguage" id="subtitleLanguage">
-                <option value="">Language Select</option>
+                <option value="">Select Voice</option>
                 <option value="lang1">Language 1</option>
                 <option value="lang2">Language 2</option>
               </select>
