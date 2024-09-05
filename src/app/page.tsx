@@ -9,12 +9,12 @@ export default function Home() {
     <div className=" ">
       <div className="grid md:grid-cols-2 gap-y-10 items-center">
         {/* min-h-[100vh]  max-w-[418px] pl-[113px] pr-4 */}
-        <div className=" bg-[#F5F7FA] flex flex-col justify-center md:pl-[113px] md:pr-4 h-full">
+        <div className=" bg-[#F5F7FA] flex flex-col justify-center lg:pl-[113px] md:pr-4 h-full">
           <div className="md:max-w-[418px] 2xl:mx-auto">
             <Image src={logo} height={100} width={200} alt="" />
-            <h1 className="main-title mt-[40px] md:mt-[94px] mb-3 ">Login</h1>
-            <p className="login-desc mb-10">Login to your account and see the magic of AI.</p>
-            <div className="mb-[17px]"><input type="email" name="" placeholder="Email Address" id="" /></div>
+            <h1 className="main-title mt-[30px] md:mt-[94px] mb-[5px] md:mb-3 ">Login</h1>
+            <p className="login-desc mb-5 md:mb-10">Login to your account and see the magic of AI.</p>
+            <div className="mb-2 md:mb-[17px]"><input type="email" name="" placeholder="Email Address" id="" /></div>
            <div className="mb-[15px]"> <input type="password" name="" placeholder="Password" id="" /></div>
            <p className="text-right mb-[19px]"> <Link href="/forgotpassword" className="login-desc">Forgot Password?</Link></p>
       <div><Link href="/home-page" className="button inline-block text-center leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">Login</Link> </div>

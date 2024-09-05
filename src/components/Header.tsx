@@ -36,14 +36,14 @@ const Header: React.FC<HeaderProps> = ({
   const currentPageName = pageNames[pathname] || "Home";
 
   return (
-    <header className="hidden md:flex justify-between items-center py-[23px] px-[30px] bg-white ">
+    <header className="hidden lg:flex justify-between items-center py-[23px] px-[30px] bg-white ">
       <div className="min-w-[270px] ">
         <Link href="/">
           <Image
             src={Logo}
             alt=""
             height={100}
-            width={200}
+            width={200} 
             className="max-w-[158px] "
           />
         </Link>

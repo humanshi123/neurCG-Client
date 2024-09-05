@@ -254,9 +254,37 @@ select, .custom-select .css-13cymwt-control {
   font-size: 14px;
   color: #828282;
 }
-@media screen and (max-width: 767px)  {
+@media screen and (max-width: 1025px) {
   .side-bar {
     align-items: center;
     padding: 10px 20px;
   }
+}
+@media screen and (max-width: 767px)  {
+
+  .main-title {
+    font-size: 26px;
+}
+input {   
+  padding: 12px 20px;
+  font-size: 14px;
+  line-height: normal; 
+}
+.section-title {
+  font-size: 20px;
+}
+.dropdown-title::after {
+  top: 8px;
+}
+.text-selecion select {
+  padding: 10px 15px;
+  height: 45px;
+  line-height: normal;
+}
+.custom-select .css-13cymwt-control {
+  min-height: 45px;
+}
+.text-area {
+  height: 100px;
+}
 }

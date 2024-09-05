@@ -99,12 +99,6 @@ const AvatarSelection: React.FC = () => {
     },
     []
   );
-  //For better type safety, you can replace any with more specific types if you know them. For example:
-  // import { Area, PixelCrop } from 'react-easy-crop';
-
-  // const onCropComplete = useCallback((croppedArea: Area, croppedAreaPixels: PixelCrop) => {
-  //   setCroppedAreaPixels(croppedAreaPixels);
-  // }, []);
 
   const handleCropSave = async () => {
     if (clickAvatar && croppedAreaPixels) {
@@ -140,7 +134,7 @@ useEffect(() => {
 
   return (
     //shadow-[0_4px_4px_0_rgba(0,0,0,0.08)]
-    <div className="bg-white rounded-lg p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
+    <div className="bg-white rounded-lg p-[15px] md:p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
       <h2 className={`section-title dropdown-title ${isOpen ? 'active' : ''}`}
                 onClick={toggleOpen}>
         Avatar</h2>
@@ -150,10 +144,10 @@ useEffect(() => {
                     maxHeight: isOpen ? contentRef.current?.scrollHeight : 0,
                     opacity: isOpen ? 1 : 0,
                 }}>
-        <div className="mt-5 flex items-center">
-          <div className="w-1/2 image-section ">
+        <div className="mt-5 flex md:flex-row flex-col gap-y-5 lg:items-center">
+          <div className="lg:w-1/2 md:w-[45%] image-section ">
             <h3 className="text-[#6B6B6B] text-sm mb-2">Choose a pre-made</h3>
-            <div className="flex gap-[21px]">
+            <div className="flex lg:flex-row flex-col gap-[21px]">
               <div className="border border-[#E87223] rounded-[5px] w-[169px]">
                 {customAvatar ? (
                   <Image
@@ -194,10 +188,10 @@ useEffect(() => {
               </div>
             </div>
           </div>
-          <h3 className=" w-[10%] mx-[20px] 2xl:mx-[45px] flex justify-center items-center text-[#6B6B6B] text-sm italic">
+          <h3 className="md:w-[15%] lg:w-[10%] mx-[20px] 2xl:mx-[45px] flex justify-center items-center text-[#6B6B6B] text-sm italic">
             —— Or ——
           </h3>
-          <div className="w-[40%] ">
+          <div className="md:w-[40%] ">
             <h3 className="text-[#6B6B6B] text-sm mb-2">Create Your Own</h3>
             {/* Display the image captured from the camera or uploaded via gallery */}
             <div className="flex items-center gap-[21px]">

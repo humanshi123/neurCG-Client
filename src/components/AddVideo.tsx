@@ -36,7 +36,7 @@ const AddVideo = () => {
   };
 
   return (
-    <div className="mt-5 bg-white rounded-lg p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
+    <div className="mt-5 bg-white rounded-lg p-[15px] md:p-[30px]  shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
       <h2  
         className={`section-title dropdown-title ${isOpen ? 'active' : ''}`}
         onClick={toggleOpen}>
@@ -48,7 +48,7 @@ const AddVideo = () => {
           maxHeight: isOpen ? contentRef.current?.scrollHeight : 0,
           opacity: isOpen ? 1 : 0,
         }}>
-        <div className="text-selecion mt-5 grid grid-cols-[minmax(0,_7fr)_minmax(0,_5fr)] gap-5">
+        <div className="text-selecion mt-5 grid md:grid-cols-[minmax(0,_7fr)_minmax(0,_5fr)] gap-5">
           <div>
             <label htmlFor="" className="grid mb-2">
               Upload Video

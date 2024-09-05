@@ -63,7 +63,7 @@ const AddVoice = () => {
 
 
   return (
-    <div className="mt-5 bg-white rounded-lg p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
+    <div className="mt-5 bg-white rounded-lg p-[15px] md:p-[30px]  shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
       <h2
         className={`section-title dropdown-title ${isOpen ? "active" : ""}`}
         onClick={toggleOpen}
@@ -78,8 +78,8 @@ const AddVoice = () => {
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <div className="mt-5 flex items-center gap-5">
-          <div className="min-w-[359px]">
+        <div className="mt-5 flex md:flex-row flex-col items-center gap-5">
+          <div className="md:min-w-[359px] w-full">
           <PreferredVoice />
           </div>
           <label htmlFor="" className="grid gap-2 w-full max-w-[359px]">

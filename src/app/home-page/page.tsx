@@ -58,11 +58,11 @@ const ClientVideos =[
 const Page = () => {
     return (
         <div>
-            <h2 className="section-title mb-5">Getting Started</h2>
+          <h2 className="section-title mb-5">Getting Started</h2>
         <Tabs />
-         <section className='mt-[50px]'>
-        <h2 className='section-title mb-5'>How to use NeurCG</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+         <section className='mt-[30px] md:mt-[50px]'>
+        <h2 className='section-title mb-[10px] md:mb-5'>How to use NeurCG</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
         {VideoData.map((data) =>(
             <NeurcgCard
             key= {data.id}
@@ -73,9 +73,9 @@ const Page = () => {
         ))}
         </div>
          </section>
-        <section className='mt-[50px]'>
-         <h2 className="section-title mb-5">Recent</h2>
-         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <section className='mt-[30px] md:mt-[50px]'>
+         <h2 className="section-title mb-[10px] md:mb-5">Recent</h2>
+         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
          {ClientVideos.map((data) =>(
             <VideoCards
             key= {data.id}

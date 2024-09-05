@@ -33,11 +33,11 @@ export default function RootLayout({
           }
         </div>
         <div className="flex h-screen flex-col lg:flex-row lg:overflow-hidden">
-          <div className="flex-none md:h-[100vh] ">
+          <div className="flex-none ">  {/*md:h-[100vh]  */}
             {/* <SideNav /> */}
             {!hideSideBar.includes(pathname) && <SideBar /> }
           </div>
-          <main className="flex-grow md:overflow-y-auto overflo-custom bg-[#F5F7FA] px-[35px] py-[40px] ">
+          <main className="flex-grow md:overflow-y-auto overflo-custom bg-[#F5F7FA] p-5 md:px-[35px] md:py-[40px] ">
             {children}
           </main>
         </div>

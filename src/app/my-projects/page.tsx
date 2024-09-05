@@ -67,8 +67,8 @@ const Page = () => {
   return (
     <div>
       <section className="my-projects-recent">
-        <h2 className="section-title mb-5">Recent</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <h2 className="section-title mb-[10px] md:mb-5">Recent</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {ClientVideos.map((data) => (
             <VideoCards
               key={data.id}
@@ -79,9 +79,9 @@ const Page = () => {
           ))}
         </div>
       </section>
-      <section className="last-months mt-[40px]">
-        <h2 className="section-title mb-5">Last Month</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <section className="last-months mt-[30px] md:mt-[40px]">
+        <h2 className="section-title mb-[10px] md:mb-5">Last Month</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {LastMonthData.map((data) => (
             <VideoCards
               key={data.id}

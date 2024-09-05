@@ -87,7 +87,7 @@ useEffect(() => {
   );
 
   return (
-    <div className="mt-5 bg-white rounded-lg p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
+    <div className="mt-5 bg-white rounded-lg p-[15px] md:p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
       <h2  
       className={`section-title dropdown-title ${isOpen ? 'active' : ''}`}
       onClick={toggleOpen}>
@@ -98,7 +98,7 @@ useEffect(() => {
                     maxHeight: isOpen ? contentRef.current?.scrollHeight : 0,
                     opacity: isOpen ? 1 : 0,
                 }}>
-    <div className="mt-5 text-selecion grid grid-cols-[minmax(0,_7fr)_minmax(0,_5fr)] gap-5">
+    <div className="mt-5 text-selecion grid md:grid-cols-[minmax(0,_7fr)_minmax(0,_5fr)] gap-5">
         <div>
           <label htmlFor="" className="grid gap-2">
             Enter Your Text Here
@@ -131,7 +131,7 @@ useEffect(() => {
           <label htmlFor="" className="grid gap-2">
            <p className="flex justify-between items-center font-inter"> Use Your Own Voice 
             <span className="flex items-center gap-2 text-xs"><CrownIcon />Premium </span></p>
-            <div className="flex items-center justify-between  relative border border-[#FFE2CE] py-2 pl-[18px] pr-2 rounded-[5px] h-[52px] ">
+            <div className="flex items-center justify-between  relative border border-[#FFE2CE] py-2 pl-[18px] pr-[5px] md:pr-2 rounded-[5px] h-[45px] md:h-[50px] ">
             <input
               type="file"
               accept="audio/*"

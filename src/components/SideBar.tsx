@@ -34,21 +34,21 @@ const SideBar = () => {
 
 
   return (
-    <div className="side-bar z-2 relative overflo-custom h-[100%] overflow-y-scroll flex md:flex-col justify-between">
+    <div className="side-bar z-2 relative overflo-custom h-[100%] overflow-y-scroll flex lg:flex-col justify-between">
       {/* Hamburger Menu */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
       <Link href="/">
           <Image
             src={Logo}
             alt=""
             height={100}
             width={200}
-            className="max-w-[158px] "
+            className="max-w-[158px] " 
           />
         </Link>
       </div>
       <button 
-        className="block md:hidden relative  z-[3] " 
+        className="block lg:hidden relative  z-[3] " 
         onClick={toggleSidebar}
       >
         {isOpen ? <ToggleClose /> : <MenuIcon />} {/* Show Close icon when open, Hamburger when closed */}

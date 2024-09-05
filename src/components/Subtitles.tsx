@@ -22,7 +22,7 @@ const Subtitles = () => {
     }, [isOpen]);
 
     return (
-        <div className="mt-5 bg-white rounded-lg p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
+        <div className="mt-5 bg-white rounded-lg p-[15px] md:p-[30px]  shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
             <h2 
                 className={`section-title dropdown-title ${isOpen ? 'active' : ''}`}
                 onClick={toggleOpen}
@@ -37,10 +37,10 @@ const Subtitles = () => {
                     opacity: isOpen ? 1 : 0,
                 }}
             >
-       <div className='mt-5 grid grid-cols-[minmax(0,_4fr)_minmax(0,_8fr)] gap-5 '>
+       <div className='mt-5 grid md:grid-cols-[minmax(0,_4fr)_minmax(0,_8fr)] gap-5 '>
                  <label htmlFor="">
                     Subtitles
-                    <div className="mt-[23px] flex items-center gap-5 md:gap-[50px] ml-4 md:ml-0">
+                    <div className=" mt-2 md:mt-[23px] flex items-center gap-5 md:gap-[50px] md:ml-0">
                         <label className="custom-radio pl-[34px] flex items-center relative ">
                             <input className="mr-2" type="radio" value="Yes" name="3" />
                             <span className="text-[#6B6B6B] text-base"> Yes</span>
@@ -51,7 +51,7 @@ const Subtitles = () => {
                         </label>
                     </div>
                 </label> 
-                <label htmlFor="" className="grid gap-2 mb-5 max-w-[359px]">
+                <label htmlFor="" className="grid gap-2 md:mb-5 max-w-[359px]">
                     Subtitle Language
                     <select name="" id="">
                         <option value="">Language Select</option>

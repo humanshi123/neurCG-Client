@@ -47,8 +47,8 @@ const VideoCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
             </div>
           )}
           <div className="mt-[15px] mb-[11px] flex items-center gap-[10px] px-[14px]">
-            <p><VideoPlayerIcon /></p>
-            <h3 className="text-[#3A2C23] text-sm">{title}</h3>
+            <p className="leading-normal"><VideoPlayerIcon /></p>
+            <h3 className="text-[#3A2C23] text-sm leading-[normal] ">{title}</h3>
           </div>
         </div>
       </div>
