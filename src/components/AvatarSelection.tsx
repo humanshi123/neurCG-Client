@@ -52,16 +52,21 @@ const AvatarSelection: React.FC = () => {
   const handleCameraClick = () => {
     setOpenInstruction(false);
     setIsCameraOpen(true);
-    if (videoRef.current) {
-      navigator.mediaDevices
-        .getUserMedia({ video: true })
-        .then((stream) => {
-          videoRef.current!.srcObject = stream;
-        })
-        .catch((err) => {
-          console.error("Error accessing the camera: ", err);
-        });
-    }
+    // Request camera access and start stream
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then((stream) => {
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+          videoRef.current.play().catch((error) => {
+            console.error("Error playing the video stream:", error);
+          });
+        }
+      })
+      .catch((err) => {
+        console.error("Error accessing the camera: ", err);
+        alert("Could not access the camera. Please allow camera access.");
+      });
   };
 
   const handleTakePicture = () => {
@@ -229,7 +234,7 @@ useEffect(() => {
                 <label className="xl:min-w-[145px] font-inter text-xs bg-[#E87223] !text-white px-4 py-[7px] rounded-[3px] cursor-pointer text-center">
                   Browse Gallery
                   <input
-                    type="file"
+                    type="file" 
                     accept="image/*"
                     className="hidden"
                     onChange={handleFileChange}
@@ -246,7 +251,7 @@ useEffect(() => {
         onRequestClose={closeInstructionModal}
         contentLabel="Open Camera"
         className="modal p-10 bg-white w-[90%] max-w-[677px] max-h-[90vh] rounded-[20px] overflow-auto overflo-custom "
-        overlayClassName="w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        overlayClassName="z-[10] w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       >
         <div className="flex gap-[34px] items-center ">
           <div>
@@ -290,8 +295,8 @@ useEffect(() => {
         isOpen={isCropping}
         onRequestClose={() => setIsCropping(false)}
         contentLabel="Open Camera"
-        className="modal p-10 bg-white w-[90%] max-w-[677px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
-        overlayClassName="w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        className="modal p-10 bg-white w-[90%] max-w-[900px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
+        overlayClassName="z-[10] w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center  "
         // onAfterOpen={afterOpenModal}
         // onRequestClose={closeModal}
         // style={customStyles}
@@ -355,8 +360,8 @@ useEffect(() => {
         isOpen={isCameraOpen}
         onRequestClose={() => setIsCameraOpen(false)}
         contentLabel="Open Camera"
-        className="modal p-10 bg-white w-[90%] max-w-[677px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
-        overlayClassName="w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        className="modal p-10 bg-white w-[90%] max-w-[900px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
+        overlayClassName="w-full h-full z-[10] fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
         // onAfterOpen={afterOpenModal}
         // onRequestClose={closeModal}
         // style={customStyles}

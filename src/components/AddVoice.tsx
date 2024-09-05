@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Select from "react-select";
 import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
 import { CrownIcon, FemaleIcon, MaleIcon } from "@/utils/svgIcons";
+import PreferredVoice from "./PreferredVoice";
 
 interface VoiceOption {
   value: string;
@@ -28,7 +29,6 @@ const voiceOptions: VoiceOption[] = [
 ];
 
 const AddVoice = () => {
-  const [selectedVoice, setSelectedVoice] = useState<VoiceOption | null>(null);
   const [isOpen, setIsOpen] = useState(true);
   const contentRef = useRef<HTMLDivElement>(null);
   const [menuPortalTarget, setMenuPortalTarget] = useState<HTMLElement | null>(null);
@@ -55,43 +55,12 @@ const AddVoice = () => {
     }
   }, []);
 
-  const handleVoiceSelect = (option: VoiceOption | null) => {
-    setSelectedVoice(option);
-  };
 
   const playAudio = (audioSrc: string) => {
     const audio = new Audio(audioSrc);
     audio.play();
   };
 
-  const playAudioWithStopPropagation = (
-    audioSrc: string,
-    e: React.MouseEvent
-  ) => {
-    e.stopPropagation();
-    playAudio(audioSrc);
-  };
-
-  const formatOptionLabel = (option: VoiceOption) => (
-    <div className="flex items-center justify-between">
-      <span className="flex items-center gap-[10px]">
-        {option.label}{" "}
-        {option.gender === "male" ? (
-          <span>
-            <MaleIcon />
-          </span>
-        ) : (
-          <span>
-            <FemaleIcon />
-          </span>
-        )}
-      </span>
-      <SpeakerWaveIcon
-        className="h-5 w-5 text-gray-500 cursor-pointer"
-        onClick={(e) => playAudioWithStopPropagation(option.audioSrc, e)}
-      />
-    </div>
-  );
 
   return (
     <div className="mt-5 bg-white rounded-lg p-[30px] shadow-[0_0_40px_0_rgba(235,130,60,0.06)]">
@@ -110,22 +79,9 @@ const AddVoice = () => {
         }}
       >
         <div className="mt-5 flex items-center gap-5">
-          <label htmlFor="" className="grid gap-2 min-w-[359px]">
-            Preferred Voice
-            <Select
-              options={voiceOptions}
-              formatOptionLabel={formatOptionLabel}
-              isSearchable
-              className="custom-select outline-none text-[#828282]"
-              classNamePrefix="react-select"
-              placeholder="Select Voice"
-              onChange={handleVoiceSelect}
-              menuPortalTarget={menuPortalTarget} // Now set dynamically
-              styles={{
-                menuPortal: (base) => ({ ...base, zIndex: 9999 }),
-              }}
-            />
-          </label>
+          <div className="min-w-[359px]">
+          <PreferredVoice />
+          </div>
           <label htmlFor="" className="grid gap-2 w-full max-w-[359px]">
             <p className="flex justify-between items-center font-inter">
               Use Your Own Voice
@@ -134,7 +90,7 @@ const AddVoice = () => {
                 Premium
               </span>
             </p>
-            <div className="flex items-center justify-between relative border border-[#FFE2CE] py-2 pl-[18px] pr-2 rounded-[5px] h-[52px]">
+            <div className="flex items-center justify-between relative border border-[#FFE2CE] py-2 pl-[18px] pr-2 rounded-[5px] h-[50px]">
               <input
                 type="file"
                 accept="audio/*"
@@ -157,6 +113,7 @@ const AddVoice = () => {
           </label>
         </div>
       </div>
+      
     </div>
   );
 };

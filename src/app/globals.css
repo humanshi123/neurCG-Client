@@ -152,6 +152,7 @@ ul.navList li a span {
 .custom-select .css-13cymwt-control {
   min-height: 50px;
   border-color: #ffe2ce;
+  border-radius: 5px;
 }
 .custom-select .css-1wy0on6 {
   display: none;

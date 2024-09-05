@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="hidden md:flex justify-between items-center py-[23px] px-[30px] bg-white ">
-      <div className="min-w-[267px] ">
+      <div className="min-w-[270px] ">
         <Link href="/">
           <Image
             src={Logo}

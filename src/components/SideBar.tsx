@@ -34,7 +34,7 @@ const SideBar = () => {
 
 
   return (
-    <div className="side-bar z-20 relative overflo-custom h-[100%] overflow-y-scroll flex md:flex-col justify-between">
+    <div className="side-bar z-2 relative overflo-custom h-[100%] overflow-y-scroll flex md:flex-col justify-between">
       {/* Hamburger Menu */}
       <div className="md:hidden">
       <Link href="/">
@@ -48,14 +48,14 @@ const SideBar = () => {
         </Link>
       </div>
       <button 
-        className="block md:hidden" 
+        className="block md:hidden relative  z-[3] " 
         onClick={toggleSidebar}
       >
         {isOpen ? <ToggleClose /> : <MenuIcon />} {/* Show Close icon when open, Hamburger when closed */}
       </button>
 
       {/* Sidebar */}
-      <div className={`fixed  lg:relative top-0 left-0 w-[262px] h-full bg-white transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+      <div className={`fixed z-[3] overflo-custom  overflow-y-scroll lg:relative top-0 left-0 w-[262px] h-full bg-white transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
         <div className="pl-[30px] pt-[74px] md:pt-[38px] ">
           <ul className="navList">
             <li className={isActive('/home-page')}>
@@ -116,7 +116,7 @@ const SideBar = () => {
       {/* Overlay to close sidebar when clicking outside */}
       {isOpen && (
         <div 
-          className="fixed inset-0 z-[-1] bg-black opacity-50 lg:hidden"
+          className="fixed inset-0 z-[1] bg-black opacity-50 lg:hidden"
           onClick={toggleSidebar}
         />
         

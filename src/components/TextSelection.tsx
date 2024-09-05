@@ -4,6 +4,7 @@ import Select from "react-select";
 import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
 import { CrownIcon, FemaleIcon, MaleIcon } from "@/utils/svgIcons";
 import { space } from "postcss/lib/list";
+import PreferredVoice from "./PreferredVoice";
 
 interface VoiceOption {
   value: string;
@@ -113,7 +114,10 @@ useEffect(() => {
               <option value="">Language 2</option>
             </select>
           </label>
-          <label htmlFor="" className="grid gap-2 mb-5">
+         <div className="mb-5">
+         <PreferredVoice />
+         </div>
+          {/* <label htmlFor="" className="grid gap-2 mb-5">
             Preferred Voice
             <Select
               options={voiceOptions}
@@ -123,7 +127,7 @@ useEffect(() => {
               placeholder="Select Voice"
               onChange={handleVoiceSelect}
             />
-          </label>
+          </label> */}
           <label htmlFor="" className="grid gap-2">
            <p className="flex justify-between items-center font-inter"> Use Your Own Voice 
             <span className="flex items-center gap-2 text-xs"><CrownIcon />Premium </span></p>

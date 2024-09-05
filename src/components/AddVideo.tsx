@@ -55,7 +55,7 @@ const AddVideo = () => {
             </label>
             <div className="custom border-dashed border-[#E87223] border relative h-[146px] rounded-[5px]">
               <input
-                className="absolute top-0 left-0 h-full w-full opacity-0 cursor-pointer"
+                className="absolute z-[1] top-0 left-0 h-full w-full opacity-0 cursor-pointer"
                 type="file"   
                 accept="video/*"
                 onChange={handleVideoChange}
