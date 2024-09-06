@@ -21,7 +21,7 @@ export default function Home() {
           <input type="number" name="" id="" /> 
           </div>
            
-      <div><Link href="/newpassword" className="button inline-block text-center leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">
+      <div><Link href="/newpassword" className="button inline-block text-center md:leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">
       Verify</Link> </div>
       <p className="login-desc text-center mt-3 md:mt-[25px] ">Remember Your Password? <Link href="/" className="text-[#E87223]">Login</Link> </p>
 

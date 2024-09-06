@@ -17,7 +17,7 @@ export default function Home() {
             <div className="mb-2 md:mb-[17px]"><input type="email" name="" placeholder="Email Address" id="" /></div>
            <div className="mb-[15px]"> <input type="password" name="" placeholder="Password" id="" /></div>
            <p className="text-right mb-[19px]"> <Link href="/forgotpassword" className="login-desc">Forgot Password?</Link></p>
-      <div><Link href="/home-page" className="button inline-block text-center leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">Login</Link> </div>
+      <div><Link href="/home-page" className="button inline-block text-center md:leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">Login</Link> </div>
           <p className="login-desc mt-[20px] md:mt-[153px] ">Copyright © 2020 - 2025 NeurCG.</p>
           </div>
         </div>

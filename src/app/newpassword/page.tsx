@@ -17,7 +17,7 @@ export default function Home() {
             <div className="mb-2 md:mb-[17px]"><input type="password" name="" placeholder="Create Password" id="" /></div>
            <div className="mb-4 md:mb-[24px]"> <input type="password" name="" placeholder="Confirm Password" id="" /></div>
 
-      <div><Link href="/home-page" className="button inline-block text-center leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">
+      <div><Link href="/home-page" className="button inline-block text-center md:leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">
       Create New Password</Link> </div>
           <p className="login-desc mt-[20px] md:mt-[153px] ">Copyright © 2020 - 2025 NeurCG.</p>
           </div> 

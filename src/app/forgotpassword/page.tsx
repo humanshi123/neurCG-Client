@@ -16,7 +16,7 @@ export default function Home() {
             <p className="login-desc mb-5 md:mb-10">Enter your email to receive an OTP for reset.</p>
             <div className="mb-[15px]"><input type="email" name="" placeholder="Email Address" id="" /></div>
        
-      <div><Link href="/otp" className="button inline-block text-center leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">
+      <div><Link href="/otp" className="button inline-block text-center md:leading-7 w-full bg-[#e87223] rounded-[5px] text-white text-base p-[15px]">
       Send OTP</Link> </div>
       <p className="login-desc text-center mt-[25px] ">Remember Your Password? <Link href="/" className="text-[#E87223]">Login</Link> </p>
 
