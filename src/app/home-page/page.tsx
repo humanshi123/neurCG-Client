@@ -16,7 +16,7 @@ const VideoData =[
     id:1,
     title: "Lorem Ipsum Dummy Title",
     thumbnail: thumbimg1,
-    url: "https://www.youtube.com/embed/sscX432bMZo?si=QeHnuJ8RS0ALfqWU"
+    url: "https://youtu.be/K4TOrB7at0Y?si=zFMHw8k0jDjXiGMi"
   },
   {
     id:2,
@@ -58,9 +58,9 @@ const ClientVideos =[
 const Page = () => {
     return (
         <div>
-          <h2 className="section-title mb-5">Getting Started</h2>
+          
         <Tabs />
-         <section className='mt-[30px] md:mt-[50px]'>
+         <section className=''>
         <h2 className='section-title mb-[10px] md:mb-5'>How to use NeurCG</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
         {VideoData.map((data) =>(

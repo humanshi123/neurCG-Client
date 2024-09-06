@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { CrossIcon, VideoPlayerIcon } from "@/utils/svgIcons";
 import Image, { StaticImageData } from "next/image";
+import Modal from "react-modal";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -40,7 +41,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
               width={500} // Adjust this size as needed
               height={300} // Adjust this size as needed
               layout="responsive"
-            />
+            /> 
           ) : (
             <div className=" bg-gray-200 flex items-center justify-center rounded-lg">
               <p>Video Available</p>
@@ -53,9 +54,15 @@ const VideoCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="w-full max-w-[70%] h-[90vh] p-10 pt-[50px]  rounded-[20px] overflo-custom overflow-y-auto relative bg-white">
+      <Modal
+       bodyOpenClassName="overflow-hidden"
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Open Camera"
+        className="modal w-full max-w-[70%] h-[90vh] p-10 pt-[50px]  rounded-[20px] overflo-custom overflow-y-auto relative bg-white "
+        overlayClassName="z-[10] w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        >
+      
             <button
               className="absolute top-4 right-5"
               onClick={closeModal}
@@ -67,9 +74,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
               height="100%"
               controls={true}
             />
-          </div>
-        </div>
-      )}
+      </Modal>
     </>
   );
 };

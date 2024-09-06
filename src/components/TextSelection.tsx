@@ -102,7 +102,7 @@ useEffect(() => {
         <div>
           <label htmlFor="" className="grid gap-2">
             Enter Your Text Here
-            <textarea name="" id="" rows={13} className="text-area"></textarea>
+            <textarea name="" id="" rows={5} className="text-area md:h-[240px]"></textarea>
           </label>
         </div>
         <div>

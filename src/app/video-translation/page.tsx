@@ -9,6 +9,9 @@ const Page = () => {
             <AddVideo />
             <AddVoice />
             <Subtitles />
+            <div className='flex justify-end mt-10'>
+                <button className='text-sm bg-[#E87223] text-white px-[28px] py-[11px] rounded-[5px]'>Animate</button>
+            </div>
         </div>
     );
 }

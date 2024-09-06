@@ -68,7 +68,7 @@ const AddVoice = () => {
         className={`section-title dropdown-title ${isOpen ? "active" : ""}`}
         onClick={toggleOpen}
       >
-        Text
+        Voice
       </h2>
       <div
         ref={contentRef}
@@ -78,8 +78,8 @@ const AddVoice = () => {
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <div className="mt-5 flex md:flex-row flex-col items-center gap-5">
-          <div className="md:min-w-[359px] w-full">
+        <div className="text-selecion mt-5 flex md:flex-row flex-col items-center gap-5">
+          <div className="md:min-w-[359px] ">
           <PreferredVoice />
           </div>
           <label htmlFor="" className="grid gap-2 w-full max-w-[359px]">
@@ -89,7 +89,7 @@ const AddVoice = () => {
                 <CrownIcon />
                 Premium
               </span>
-            </p>
+            </p> 
             <div className="flex items-center justify-between relative border border-[#FFE2CE] py-2 pl-[18px] pr-2 rounded-[5px] h-[50px]">
               <input
                 type="file"

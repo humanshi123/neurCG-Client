@@ -240,7 +240,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 <input
                   type="text"
                   name="state"
-                  placeholder="State"
+                  placeholder="State*"
                   value={formData.city}
                   onChange={handleChange}
                 />

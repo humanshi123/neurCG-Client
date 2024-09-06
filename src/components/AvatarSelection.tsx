@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import Cropper from "react-easy-crop";
 import avatar1 from "@/assets/images/video1.png";
-import avatar2 from "@/assets/images/video2.png";
+import avatar2 from "@/assets/images/video2.png"; 
 import avatar3 from "@/assets/images/video3.png";
 import avatar4 from "@/assets/images/video4.png";
 import { getCroppedImg } from "@/utils/getCroppedImg"; // Implement this function
@@ -225,7 +225,7 @@ useEffect(() => {
                 >
                   Open Camera
                 </button>
-                <label className="xl:min-w-[145px] font-inter text-xs bg-[#E87223] !text-white px-4 py-[7px] rounded-[3px] cursor-pointer text-center">
+                <label className="xl:min-w-[145px] font-inter h-[32px] !text-xs bg-[#E87223] !text-white px-4 py-[8px] rounded-[3px] cursor-pointer text-center">
                   Browse Gallery
                   <input
                     type="file" 
@@ -237,19 +237,19 @@ useEffect(() => {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
 
       <Modal
         isOpen={openInstruction}
         onRequestClose={closeInstructionModal}
         contentLabel="Open Camera"
-        className="modal p-10 bg-white w-[90%] max-w-[677px] max-h-[90vh] rounded-[20px] overflow-auto overflo-custom "
+        className="modal p-5 md:p-10 bg-white w-[90%] max-w-[677px] max-h-[90vh] rounded-[20px] overflow-auto overflo-custom "
         overlayClassName="z-[10] w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       >
-        <div className="flex gap-[34px] items-center ">
+        <div className="grid md:flex gap-[34px] items-center ">
           <div>
-            <Image src={instructionimg} alt="" className="rounded-[5px]" />
+            <Image src={instructionimg} alt="" className="rounded-[5px] w-full" />
           </div>
           <div>
             <h2 className="section-title !text-[28px] mb-2">
@@ -289,7 +289,7 @@ useEffect(() => {
         isOpen={isCropping}
         onRequestClose={() => setIsCropping(false)}
         contentLabel="Open Camera"
-        className="modal p-10 bg-white w-[90%] max-w-[900px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
+        className="modal p-5 md:p-10 bg-white w-[90%] max-w-[900px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
         overlayClassName="z-[10] w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center  "
         // onAfterOpen={afterOpenModal}
         // onRequestClose={closeModal}
@@ -354,7 +354,7 @@ useEffect(() => {
         isOpen={isCameraOpen}
         onRequestClose={() => setIsCameraOpen(false)}
         contentLabel="Open Camera"
-        className="modal p-10 bg-white w-[90%] max-w-[900px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
+        className="modal p-5 md:p-10 bg-white w-[90%] max-w-[900px] max-h-[90vh] rounded-xl overflow-auto overflo-custom "
         overlayClassName="w-full h-full z-[10] fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
         // onAfterOpen={afterOpenModal}
         // onRequestClose={closeModal}
