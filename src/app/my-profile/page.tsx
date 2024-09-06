@@ -120,7 +120,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     <div>
       <form onSubmit={handleSubmit}>
           <div className="bg-white rounded-[8px] p-5 md:p-[30px]"> 
-          <div className="flex justify-between items-center mb-10">
+          <div className="grid md:flex gap-y-4 justify-between items-center mb-10">
           <div className="custom relative w-[177px] h-[177px] ">
           <input
             className="absolute top-0 left-0 h-full w-full opacity-0 p-0 cursor-pointer"
