@@ -13,7 +13,7 @@ interface VideoCardProps {
   thumbnail?: string | StaticImageData; // Optional thumbnail
 }
 
-const   VideoCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
+const NeurcgCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCardClick = () => {
@@ -79,4 +79,4 @@ const   VideoCard: React.FC<VideoCardProps> = ({ url, title, thumbnail }) => {
   );
 };
 
-export default VideoCard;
+export default NeurcgCard;
