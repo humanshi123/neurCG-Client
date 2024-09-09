@@ -118,16 +118,16 @@ ul.navList li a span {
 .custom-tabs li.active p svg circle {
   stroke: #e87223;
 }
-.button {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  padding: 8px 27px;
-  height: 43px;
-  border-radius: 5px;
-  background: #e87223;
-}
+  .button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 8px 27px;
+    height: 43px;
+    border-radius: 5px;
+    background: #e87223;
+  }
 .image-section .thumbnail.active img {
   border: 2px solid #e87223;
 }

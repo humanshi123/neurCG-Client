@@ -247,7 +247,7 @@ useEffect(() => {
         className="modal p-5 md:p-10 bg-white w-[90%] max-w-[677px] max-h-[90vh] rounded-[20px] overflow-auto overflo-custom "
         overlayClassName="z-[10] w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       >
-        <div className="grid md:flex gap-[34px] items-center ">
+        <div className="grid md:grid-cols-2 gap-[34px] items-center ">
           <div>
             <Image src={instructionimg} alt="" className="rounded-[5px] w-full" />
           </div>
@@ -277,7 +277,7 @@ useEffect(() => {
             </ul>
             <button
               onClick={handleCameraClick}
-              className="text-sm bg-[#E87223] text-white px-4 py-2 rounded"
+              className="text-sm bg-[#E87223] text-white px-4 py-[10px] rounded"
             >
               Okay, I understand
             </button>

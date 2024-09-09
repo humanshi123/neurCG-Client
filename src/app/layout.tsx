@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import SideBar from "@/components/SideBar";
 import Header from "@/components/Header";
 import dp from "@/assets/images/profilepic.png"
-
+``
 //import { Metadata } from "next";
 
 // export const metadata: Metadata = {
