@@ -66,7 +66,7 @@ const VideoCards: React.FC<VideoCardProps> = ({ videoSrc, title, thumbnail }) =>
         isOpen={isOpen}
         onRequestClose={closeModal}
         contentLabel="Open Camera"
-        className="modal w-full md:max-w-[70%] h-[90vh] p-2 md:p-10 pt-[50px]  rounded-[20px] overflo-custom overflow-y-auto relative bg-white "
+        className="modal w-full md:max-w-[70%] h-[70vh] md:h-[90vh] p-2 md:p-10 pt-[50px]  rounded-[20px] overflo-custom overflow-y-auto relative bg-white "
         overlayClassName="z-[10] px-2 md:p-0 w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
         >
           <div className=" ">

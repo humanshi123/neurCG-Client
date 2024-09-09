@@ -75,7 +75,7 @@ const Tabs: React.FC = () => {
               {currentTab < tabsData.length - 1 ? "Next Step" : "Finish"}
             </button>
             </div>
-            <div className="md:min-w-[168px] pr-[30px] ">
+            <div className="md:min-w-[168px] pb-8 md:pb-0 pr-[30px] ">
            <Image src={hangemoji} alt="" className="max-w-[80px] ml-auto" />
             </div>
           </div>
