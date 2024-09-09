@@ -120,7 +120,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     <div>
       <form onSubmit={handleSubmit}>
           <div className="bg-white rounded-[8px] p-5 md:p-[30px]"> 
-          <div className="grid md:flex gap-y-4 justify-between items-center mb-10">
+          <div className="flex md:flex-row flex-col gap-y-4 justify-between md:items-center mb-10">
           <div className="custom relative w-[177px] h-[177px] ">
           <input
             className="absolute top-0 left-0 h-full w-full opacity-0 p-0 cursor-pointer"
@@ -162,7 +162,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             </div>
           )}
         </div>
-        <div className="grid gap-[6px]">
+        <div className="grid gap-[6px] w-full">
           {CreditScores.map((item)=>(
             <CreditScore 
             key={item.id}
@@ -172,8 +172,8 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           ))}
         </div>
           </div>
-            <div className="profile-form flex flex-wrap gap-y-[30px] gap-x-[50px]">
-              <div className="md:w-[calc(45%-25px)]">
+            <div className="profile-form flex flex-wrap gap-y-3 md:gap-y-[30px] gap-x-[50px]">
+              <div className="md:w-[calc(45%-25px)] w-full">
                 <input
                   type="text"
                   name="firstName"
@@ -182,7 +182,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(55%-25px)]">
+              <div className="md:w-[calc(55%-25px)] w-full">
                 <input
                   type="text"
                   name="lastName"
@@ -191,7 +191,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(45%-30px)]">
+              <div className="md:w-[calc(45%-30px)] w-full">
                 <input
                   type="email"
                   name="email"
@@ -200,7 +200,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(20%-36px)]">
+              <div className="md:w-[calc(20%-36px)] w-full">
                 <input
                   type="date"
                   name="dob"
@@ -209,7 +209,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(35%-34px)]">
+              <div className="md:w-[calc(35%-34px)] w-full">
                 <input
                   type="number"
                   name="phoneNumber"
@@ -218,7 +218,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(60%-35px)]">
+              <div className="md:w-[calc(60%-35px)] w-full">
                 <input
                   type="text"
                   name="address"
@@ -227,7 +227,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(20%-34px)]">
+              <div className="md:w-[calc(20%-34px)] w-full">
                 <input
                   type="text"
                   name="city"
@@ -236,7 +236,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="md:w-[calc(20%-34px)]">
+              <div className="md:w-[calc(20%-34px)] w-full">
                 <input
                   type="text"
                   name="state"
@@ -246,7 +246,7 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
                 />
               </div>
             <div className="w-full">
-            <button type="submit" className="button !h-[50px] w-[169px] "> Update</button>
+            <button type="submit" className="button md:!h-[50px] w-[169px] "> Update</button>
             </div>
              
             </div>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { CrossIcon, ShareIcon, VideoPlayerIcon } from "@/utils/svgIcons";
 import Image, { StaticImageData } from "next/image";
+import Modal from "react-modal";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -60,9 +61,15 @@ const VideoCards: React.FC<VideoCardProps> = ({ videoSrc, title, thumbnail }) =>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="w-full max-w-[70%] h-[90vh] p-10 pt-[50px]  rounded-[20px] overflo-custom overflow-y-auto relative bg-white ">
+      <Modal
+       bodyOpenClassName="overflow-hidden"
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Open Camera"
+        className="modal w-full md:max-w-[70%] h-[90vh] p-2 md:p-10 pt-[50px]  rounded-[20px] overflo-custom overflow-y-auto relative bg-white "
+        overlayClassName="z-[10] px-2 md:p-0 w-full h-full fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        >
+          <div className=" ">
             <button
               className="absolute z-10 top-4 right-5"
               onClick={closeModal}
@@ -82,8 +89,7 @@ const VideoCards: React.FC<VideoCardProps> = ({ videoSrc, title, thumbnail }) =>
             > Download </button>
            </div>
           </div>
-        </div>
-      )}
+    </Modal>
     </>
   );
 };

@@ -79,7 +79,7 @@ const AddVoice = () => {
         }}
       >
         <div className="text-selecion mt-5 flex md:flex-row flex-col items-center gap-5">
-          <div className="md:min-w-[359px] ">
+          <div className="md:min-w-[359px] min-w-full ">
           <PreferredVoice />
           </div>
           <label htmlFor="" className="grid gap-2 w-full max-w-[359px]">

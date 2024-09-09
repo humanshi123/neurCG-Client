@@ -21,14 +21,14 @@ const Page = () => {
 return (
     <div>
         <h2 className='section-title mb-5'>My Referral Link</h2>
-        <div className='p-10 rounded-lg bg-white'>
-        <div className='flex items-center gap-[17px] justify-between'> 
+        <div className='p-5 md:p-10 rounded-lg bg-white'>
+        <div className='flex md:flex-row flex-col items-center gap-[17px] justify-between'> 
             <p 
             ref={textRef} 
-            className='w-full text-[#828282] border border-[#FFE2CE] px-5 py-3 rounded-[5px]'
+            className='w-full text-[#828282] border border-[#FFE2CE] px-5 py-3 rounded-[5px] break-all  '
             >https://demo.neurcg.com/animapp/auth/register?ref=We_NEED_YOUR_EMAIL
             </p>
-            <div className='min-w-[169px]'>
+            <div className='md:min-w-[169px] min-w-full '>
             <button 
                 onClick={handleCopy} 
                 className='w-full text-sm bg-[#E87223] text-white px-[28px] py-[15px] rounded-[5px]'

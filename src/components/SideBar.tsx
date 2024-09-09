@@ -1,11 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation'; 
-import Logo from "@/assets/images/logo.png"
 import Link from "next/link";
 import { AudioIcon, HomeIcon, ProfileIcon, ProjectsIcon, ReferIcon, TextIcon, VideoIcon, MenuIcon, ToggleClose} from "@/utils/svgIcons"; // Import Hamburger and Close icons
-import Image from "next/image";
-import dp from "@/assets/images/profilepic.png";
+
 
 interface SideBarProps {
   isOpen: boolean;
@@ -13,26 +11,22 @@ interface SideBarProps {
 }
 
 const SideBar = ({ isOpen, toggleSidebar }: SideBarProps) => {
-  //const [isOpen, setIsOpen] = useState(false); // State to control sidebar visibility
   const pathname = usePathname(); 
 
   const isActive = (path: string) => pathname === path ? 'active' : '';
 
-  // const toggleSidebar = () => setIsOpen(!isOpen); // Toggle sidebar open/close
-
   const handleLinkClick = (path: string) => {
-    // setActiveLink(path);
-    toggleSidebar();
+    if (isOpen) {
+      toggleSidebar();
+    }
   };
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('overflow-hidden'); // Prevent scrolling when sidebar is open
+      document.body.classList.add('overflow-hidden'); 
     } else {
-      document.body.classList.remove('overflow-hidden'); // Re-enable scrolling when sidebar is closed
+      document.body.classList.remove('overflow-hidden'); 
     }
-
-    // Clean up the effect when the component unmounts or isOpen changes
     return () => {
       document.body.classList.remove('overflow-hidden');
     };
@@ -41,12 +35,6 @@ const SideBar = ({ isOpen, toggleSidebar }: SideBarProps) => {
 
   return (
     <div className="side-bar z-2 relative overflo-custom h-[100%] overflow-y-scroll flex lg:flex-col justify-between">
-      {/* <button 
-        className="block lg:hidden absolute right-0 top-0  z-[3] " 
-        onClick={toggleSidebar}
-      >
-        {isOpen ? <ToggleClose /> : <MenuIcon />} 
-      </button> */}
 
       {/* Sidebar */}
       <div className={`fixed z-[3] flex flex-col justify-between overflo-custom  overflow-y-scroll lg:relative top-0 left-0 w-[262px] h-full bg-white transition-transform transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
@@ -113,7 +101,6 @@ const SideBar = ({ isOpen, toggleSidebar }: SideBarProps) => {
         </div>
       </div>
 
-      {/* Overlay to close sidebar when clicking outside */}
       {isOpen && (
         <div 
           className="fixed inset-0 z-[1] bg-black opacity-50 lg:hidden"
